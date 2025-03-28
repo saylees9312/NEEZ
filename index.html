@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEEZ</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-wrap">
+        <div class="header-intro">
+          <span><img src="https://neezsofa.com/theme/cream/img/main/intro-text1.png" alt="" /></span>
+          <span><img src="https://neezsofa.com/theme/cream/img/main/intro-text3.png" alt="" /></span>
+          <span><img src="https://neezsofa.com/theme/cream/img/main/intro-text3.png" alt="" /></span>
+          <span><img src="https://neezsofa.com/theme/cream/img/main/intro-text4.png" alt="" /></span>
+          <span><img src="https://neezsofa.com/theme/cream/img/main/intro-text5.png" alt="" /></span>
+        </div>
+        <div class="inner">
+          <nav class="gnb">
+            <h1 class="logo">
+              <a href="#"><img src="https://neezsofa.com/theme/cream/img/logo-test.png" alt="NEEZ" /></a>
+            </h1>
+            <ul class="menu">
+              <li>
+                <a href="#">about</a>
+                <ul class="sub-menu">
+                  <li><a href="#">about neez</a></li>
+                  <li><a href="#">ci</a></li>
+                  <li><a href="#">esg</a></li>
+                  <li><a href="#">history</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">material</a>
+                <ul class="sub-menu">
+                  <li><a href="#">feeliv</a></li>
+                  <li><a href="#">color chart</a></li>
+                  <li><a href="#">친환경 내장재</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">product</a>
+                <ul class="sub-menu">
+                  <li><a href="#">소파</a></li>
+                  <li><a href="#">테이블</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">review</a>
+                <ul class="sub-menu">
+                  <li><a href="#">Best 리뷰</a></li>
+                  <li><a href="#">포토 리뷰</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">store info</a>
+                <ul class="sub-menu">
+                  <li><a href="#">백화점</a></li>
+                  <li><a href="#">팝업 스토어</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">event</a>
+              </li>
+              <li>
+                <a href="#">cs center</a>
+                <ul class="sub-menu">
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">상품문의</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">A/S문의</a></li>
+                  <li><a href="#">개인결제창</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">cart(0)</a>
+              </li>
+              <li>
+                <a href="#">login</a>
+              </li>
+            </ul>
+            <div class="hamburger-wrap">
+              <button type="button" class="btn-hamburger"></button>
+              <div class="hamburger-inner">
+                <ul class="hamburger-menu">
+                  <li>
+                    <a href="#">about</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">about neez</a></li>
+                      <li><a href="#">ci</a></li>
+                      <li><a href="#">esg</a></li>
+                      <li><a href="#">history</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">material</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">feeliv</a></li>
+                      <li><a href="#">color chart</a></li>
+                      <li><a href="#">친환경 내장재</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">product</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">소파</a></li>
+                      <li><a href="#">테이블</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">review</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">Best 리뷰</a></li>
+                      <li><a href="#">포토 리뷰</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">store info</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">백화점</a></li>
+                      <li><a href="#">팝업 스토어</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">event</a>
+                  </li>
+                  <li>
+                    <a href="#">cs center</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">공지사항</a></li>
+                      <li><a href="#">상품문의</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">A/S문의</a></li>
+                      <li><a href="#">개인결제창</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">cart(0)</a>
+                  </li>
+                  <li>
+                    <a href="#">login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <hr />
+    <!-- //e: header -->
+
+    <main id="main">
+      <section class="visual">
+        <div class="header-bg">
+          <div class="swiper visual-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://neezsofa.com/upload/maindata1/maindata107292_0.jpg" alt="main-visual1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://neezsofa.com/upload/maindata1/maindata141849_0.png" alt="main-visual2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://neezsofa.com/upload/maindata1/maindata151776_0.png" alt="main-visual3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://neezsofa.com/upload/maindata1/maindata191453_0.jpg" alt="main-visual4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product">
+        <div class="inner">
+          <h2 class="hidden">promotion product</h2>
+          <div class="product-wrap">
+            <div class="product-banner">
+              <div class="product-con">
+                <h3>Provides Value Beyond the Product</h3>
+                <a href="#" class="more"><b>More info</b></a>
+              </div>
+            </div>
+            <ul class="product-list">
+              <li>
+                <a href="#">
+                  <figure>
+                    <img
+                      src="https://neezsofa.com/data/item/1740103230/thumb-7KCc7ZKI66mU7J24_65SU7JeQ7KaI_67Cw6rK9_308x212.jpg"
+                      alt="디에즈 모듈"
+                    />
+                  </figure>
+                  <dl>
+                    <dt>디에즈 모듈</dt>
+                    <dd>10,600,000원</dd>
+                    <dd>9,500,000원<strong class="badge">11%</strong></dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img
+                      src="https://neezsofa.com/data/item/1740134007/thumb-7KCc7ZKI66mU7J24_7Lg66W067O047J24_308x212.png"
+                      alt="쿠르보 4인"
+                    />
+                  </figure>
+                  <dl>
+                    <dt>쿠르보 4인</dt>
+                    <dd>4,900,000원</dd>
+                    <dd>4,000,000원<strong class="badge">19%</strong></dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img
+                      src="https://neezsofa.com/data/item/1740150341/thumb-7KCc7ZKI66mU7J24_7YyM66W067Kg_308x212.png"
+                      alt="파르베 4인"
+                    />
+                  </figure>
+                  <dl>
+                    <dt>파르베 4인</dt>
+                    <dd>3,900,000원</dd>
+                    <dd>3,300,000원<strong class="badge">16%</strong></dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img
+                      src="https://neezsofa.com/data/item/1740055176/thumb-7KCc7ZKI66mU7J24_66as7Yag7Iqk_308x212.jpg"
+                      alt="리토스 카우치"
+                    />
+                  </figure>
+                  <dl>
+                    <dt>리토스 카우치</dt>
+                    <dd>6,400,000원</dd>
+                    <dd>5,120,000원<strong class="badge">20%</strong></dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img
+                      src="https://neezsofa.com/data/item/1740057390/thumb-7KCc7ZKI66mU7J24_66as64uI7JeQ47J24_308x212.jpg"
+                      alt="리니에 4인"
+                    />
+                  </figure>
+                  <dl>
+                    <dt>리니에 4인</dt>
+                    <dd>5,900,000원</dd>
+                    <dd>4,720,000원<strong class="badge">20%</strong></dd>
+                  </dl>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img
+                      src="https://neezsofa.com/data/item/1740058764/thumb-7KCc7ZKI66mU7J24_7Iuc7JeQ7YWM_308x212.jpg"
+                      alt="시에테 4인"
+                    />
+                  </figure>
+                  <dl>
+                    <dt>시에테 4인</dt>
+                    <dd>6,200,000원</dd>
+                    <dd>4,960,000원<strong class="badge">20%</strong></dd>
+                  </dl>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- //e:sec1 -->
+
+      <section class="info">
+        <div class="inner">
+          <h2 class="hidden">info</h2>
+          <div class="main-title">
+            <div class="title-animation">
+              <span><img src="https://neezsofa.com/theme/cream/img/main/main-standard-img1.png" alt="" /></span>
+              <span><img src="https://neezsofa.com/theme/cream/img/main/main-standard-img2.png" alt="" /></span>
+            </div>
+            <strong
+              >공간 속 새로운 needs의 기준<br />
+              프리미엄 소파브랜드, 니즈</strong
+            >
+            <a href="#" class="more"><b>More Info</b></a>
+          </div>
+        </div>
+      </section>
+      <!-- //e:sec2 -->
+
+      <section class="material">
+        <div class="material-bg">
+          <div class="title material-con">
+            <p>국내 최초 SK Huvis 개발 친환경 신소재</p>
+            <h2>FEELIV</h2>
+            <a href="#" class="more"><b>More info</b></a>
+          </div>
+        </div>
+      </section>
+      <!-- //e:sec3 -->
+
+      <section class="store">
+        <div class="store-wrap">
+          <div class="title store-con">
+            <p>
+              전국에 위치한<br />
+              니즈 플래그십 스토어, 백화점, 팝업스토어에서<br />
+              니즈소파만의 특별함을 경험해 보세요.
+            </p>
+            <h2>Store</h2>
+            <a href="#"><b>More Info</b></a>
+          </div>
+          <figure><img src="https://neezsofa.com/theme/cream/img/main/main-store-bg.jpg" alt="" /></figure>
+        </div>
+      </section>
+      <!-- //e:sec4 -->
+    </main>
+    <hr />
+    <!-- //e: main -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="foot-wrap">
+          <div class="foot-left">
+            <h1 class="foot-logo">
+              <img src="https://neezsofa.com/theme/cream/img/footer-logo.png" alt="" />
+            </h1>
+            <div class="adress">
+              <p>상호: (주)피앤엘</p>
+              <p>대표: 이경수</p>
+              <p>사업자등록번호: 177-88-00399</p>
+              <p>통신판매업신고번호: 2017-고양일산동-1380</p>
+              <p>주소: 경기도 고양시 일산동구 성석로92번길 74</p>
+              <p>이메일: neez@pnltrading.co.kr</p>
+            </div>
+            <div class="foot-etc">
+              <p>고객센터: 1588-5083</p>
+              <p>상담시간: 10:00~17:00 (월~금 / 공휴일 제외)</p>
+            </div>
+            <p class="copyright">© (주)피앤엘 ALL RIGHTS RESERVED.</p>
+          </div>
+          <div class="foot-right">
+            <ul class="foot-menu">
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">MATERIAL</a></li>
+              <li><a href="#">PRODUCT</a></li>
+              <li><a href="#">REVIEW</a></li>
+              <li><a href="#">STORE INFO</a></li>
+              <li><a href="#">EVENT</a></li>
+              <li><a href="#">CS CENTER</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="side-btn">
+      <a href="#" class="btn-side kakao"><i class="hidden">kakao talk</i></a
+      ><a href="#" class="btn-side top"><i class="hidden">top</i></a>
+    </div>
+  </body>
+</html>
