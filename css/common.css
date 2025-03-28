@@ -51,12 +51,13 @@ body {
   background: #fff;
 }
 
-#heaer.intro .header-wrap {
+#header.on .header-wrap {
   position: relative;
   width: 100%;
   height: 100vh;
   pointer-events: none;
   user-select: none;
+  display: none;
 }
 
 .header-intro {
@@ -99,20 +100,45 @@ body {
   align-items: center;
 }
 
-.menu li a {
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
   padding: 4.6rem 1.4rem;
   /* border: 1px solid #000; */
   font-weight: 500;
   font-size: 1.7rem;
   text-transform: uppercase;
+  /* border: 1px solid #000; */
 }
 
-.menu li a:last-child {
+.menu > li > a:last-child {
   padding-right: 0;
 }
 
 .sub-menu {
-  display: none;
+  position: absolute;
+  width: min(150%, 20rem);
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-sizing: content-box;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.sub-menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #000; */
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.sub-menu li a {
+  padding: 1rem 2rem;
 }
 
 .hamburger-wrap {
@@ -231,7 +257,7 @@ body {
 .product-list li {
   width: 30.7rem;
   height: 35rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 
 .product-list li figure {
@@ -293,7 +319,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: end;
-  gap: 20rem;
+  gap: 10rem;
+}
+
+.title-animation span {
+  display: none;
+}
+
+.title-animation .nomal {
+  display: block;
 }
 
 .main-title strong {
@@ -303,26 +337,26 @@ body {
   line-height: 1.4;
 }
 
-.main-title .more {
+.more-b {
   display: flex;
   margin-top: 9.6rem;
   color: #000;
 }
 
-.main-title .more:hover {
+.more-b:hover {
   color: #000;
 }
 
-.main-title .more::before {
-  border: 1px solid rgba(0, 0, 0, 0.3);
+.more-b::before {
+  border: 1px solid rgba(0, 0, 0, 1);
   background-image: url(../img/arrow-right-up-black.svg);
 }
 
-.main-title .more b::after {
+.more-b b::after {
   background-color: #000;
 }
 
-.main-title .more:hover::before {
+.more-b:hover::before {
   background-color: #000;
 }
 
@@ -333,7 +367,7 @@ body {
 .material-bg {
   width: 100%;
   aspect-ratio: 1/1;
-  max-height: 100vh;
+  max-height: 120rem;
   background: url(https://neezsofa.com/theme/cream/img/main/main-huvis-bg.jpg) no-repeat 50% / cover;
   position: relative;
 }
@@ -371,4 +405,132 @@ body {
 .store-wrap figure {
   width: 50%;
   height: 76.8rem;
+}
+
+.store-wrap figure img {
+  object-fit: cover;
+}
+
+.store-con {
+  margin-top: 40rem;
+  margin-left: 9.525rem;
+}
+
+.store-con p {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.store-more {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.store-con h2 {
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 1;
+}
+
+.store-more .more {
+  margin-top: 4rem;
+}
+
+#footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 6rem 0;
+}
+
+.foot-inner {
+  width: 160rem;
+  margin: 0 auto;
+}
+
+.foot-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.foot-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5rem;
+}
+
+.foot-logo {
+  width: 10rem;
+  height: 3.2rem;
+}
+
+.adress {
+  font-size: 1.45rem;
+  line-height: 1.57;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 4.5px;
+  color: #666;
+}
+
+.foot-etc {
+  font-size: 1.45rem;
+  line-height: 1.57;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 4.5px;
+  color: #666;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #999;
+}
+
+.foot-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.foot-menu a {
+  display: block;
+  padding: 4px 0;
+}
+
+.side-btn {
+  position: fixed;
+  right: 2.5%;
+  bottom: 5%;
+}
+
+.btn-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: no-repeat 50% / contain;
+  border-radius: 50%;
+}
+
+.kakao {
+  background-image: url(https://neezsofa.com/theme/cream/img/icon-kakao.png);
+}
+
+.top {
+  margin-top: 5px;
+  background-image: url(https://neezsofa.com/theme/cream/img/icon-top.png);
 }
