@@ -48,25 +48,64 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background: #fff;
+  transition: all 0.3s ease;
 }
 
-#header.on .header-wrap {
+#header.header-visual {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  inset: 0;
+}
+
+#header .header-wrap {
   position: relative;
   width: 100%;
   height: 100vh;
-  pointer-events: none;
-  user-select: none;
-  display: none;
+  display: flex;
+  align-items: start;
+  justify-content: center;
 }
 
 .header-intro {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.intro-bg {
+  position: absolute;
   inset: 0;
+  background: #fff;
 }
 
 .header-intro span {
-  display: none;
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+}
+
+.header-intro .span1 {
+  width: 16.8rem;
+  top: 5%;
+  left: 5%;
+}
+
+.header-intro .span2 {
+  top: 5%;
+  right: 5%;
+}
+
+.header-intro .span3 {
+  bottom: 5%;
+  left: 5%;
+}
+
+.header-intro .span4 {
+  bottom: 5%;
+  right: 5%;
 }
 
 .inner {
@@ -75,11 +114,13 @@ body {
   position: static;
 }
 
-#header .inner {
-  height: 11rem;
+#header .head-inner {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .gnb {
@@ -87,17 +128,45 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
 }
 
 .logo {
-  width: 10rem;
-  height: 2.5rem;
+  width: 58.3rem;
+  height: 15.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.logo::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background: #000;
+  position: absolute;
+  top: -5rem;
+  right: -5rem;
 }
 
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  right: 5%;
+  margin-left: auto;
+  bottom: 5%;
 }
 
 .menu > li {
@@ -126,6 +195,7 @@ body {
   background: #fff;
   box-sizing: content-box;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  display: none;
 }
 
 .sub-menu li {
@@ -143,300 +213,6 @@ body {
 
 .hamburger-wrap {
   display: none;
-}
-
-.visual {
-  width: 100%;
-  height: 100vh;
-}
-
-.product {
-  padding: 12rem 0;
-}
-
-.product-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-.product-banner {
-  width: 73rem;
-  aspect-ratio: 1/1;
-  border-radius: 10px;
-  background: url(https://neezsofa.com/theme/cream/img/main/main-product-bg.png) no-repeat 50% / cover;
-  position: relative;
-}
-
-.product-con {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-con h3 {
-  font-weight: 600;
-  font-size: 3.6rem;
-  color: #fff;
-  white-space: nowrap;
-}
-
-.more {
-  font-weight: 500;
-  font-size: 2rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  transition: 0.4s;
-  margin-top: 2.5rem;
-  width: 18rem;
-}
-
-.more:hover {
-  color: #fff;
-}
-
-.more::before {
-  content: '';
-  width: 5rem;
-  height: 5rem;
-  border: 1px solid #fff;
-  background: url(../img/arrow-right-up-line.svg) no-repeat 50% / 50%;
-  transition: 0.4s;
-}
-
-.more:hover::before {
-  content: '';
-  width: 1rem;
-  transform: scaleY(0.25);
-  background-color: #fff;
-}
-
-.more b {
-  position: relative;
-}
-
-.more b::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-}
-
-.more:hover b::after {
-  animation: lineAni 0.4s both;
-}
-
-@keyframes lineAni {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2.7rem;
-  width: 97.5rem;
-}
-
-.product-list li {
-  width: 30.7rem;
-  height: 35rem;
-  /* border: 1px solid #000; */
-}
-
-.product-list li figure {
-  width: 100%;
-  height: 21.2rem;
-  position: relative;
-}
-
-.product-list li dl {
-  margin-top: 2.5rem;
-}
-
-.product-list li dl dt {
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 1.5;
-}
-.product-list li dl dd {
-  margin-top: 2.5rem;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: #aaa;
-  text-decoration: line-through;
-}
-.product-list li dl dd + dd {
-  margin-top: 1rem;
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 1.5;
-  color: #000;
-  text-decoration: none;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  gap: 5px;
-}
-.product-list .badge {
-  color: var(--green);
-}
-
-.info {
-  padding: 37rem 0 34rem;
-}
-
-.main-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 133rem;
-  height: 14.8rem;
-  margin: 0 auto;
-}
-
-.title-animation {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 10rem;
-}
-
-.title-animation span {
-  display: none;
-}
-
-.title-animation .nomal {
-  display: block;
-}
-
-.main-title strong {
-  margin-top: 12rem;
-  font-weight: 600;
-  font-size: 3.6rem;
-  line-height: 1.4;
-}
-
-.more-b {
-  display: flex;
-  margin-top: 9.6rem;
-  color: #000;
-}
-
-.more-b:hover {
-  color: #000;
-}
-
-.more-b::before {
-  border: 1px solid rgba(0, 0, 0, 1);
-  background-image: url(../img/arrow-right-up-black.svg);
-}
-
-.more-b b::after {
-  background-color: #000;
-}
-
-.more-b:hover::before {
-  background-color: #000;
-}
-
-.material {
-  padding: 24rem 0 0;
-}
-
-.material-bg {
-  width: 100%;
-  aspect-ratio: 1/1;
-  max-height: 120rem;
-  background: url(https://neezsofa.com/theme/cream/img/main/main-huvis-bg.jpg) no-repeat 50% / cover;
-  position: relative;
-}
-
-.material-con {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.material-con p {
-  font-weight: 600;
-  font-size: 2rem;
-  color: #fff;
-}
-
-.material-con h2 {
-  font-weight: 500;
-  font-size: 20rem;
-  color: #fff;
-}
-
-.store-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.store-wrap figure {
-  width: 50%;
-  height: 76.8rem;
-}
-
-.store-wrap figure img {
-  object-fit: cover;
-}
-
-.store-con {
-  margin-top: 40rem;
-  margin-left: 9.525rem;
-}
-
-.store-con p {
-  font-weight: 600;
-  font-size: 2rem;
-}
-
-.store-more {
-  margin-top: 2.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3.5rem;
-}
-
-.store-con h2 {
-  font-weight: 500;
-  font-size: 16rem;
-  line-height: 1;
-}
-
-.store-more .more {
-  margin-top: 4rem;
 }
 
 #footer {
