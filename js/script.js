@@ -10,6 +10,7 @@ $(function () {
   const $introBg = $('.intro-bg');
   const $introText = $('.header-intro span');
   const $logo = $('.logo');
+  const $gnb = $('.gnb');
   const introTl = gsap.timeline();
   const $menuList = $('.menu');
   const $menu = $('.menu > li');
@@ -111,7 +112,7 @@ $(function () {
   );
   introTl.to($introBg, {
     autoAlpha: 0,
-    y: 1500,
+    y: 150,
     duration: 1,
   });
   introTl.to('.header-intro .span1', {
@@ -154,7 +155,7 @@ $(function () {
       trigger: $intro,
       start: 'top 0',
       end: '+=300',
-      pin: true,
+      // pin: true,
     },
   });
 
@@ -175,13 +176,24 @@ $(function () {
     position: 'fixed',
   });
 
-  introTl.to($header, {
+  gsap.to($header, {
     scrollTrigger: {
       trigger: $headerWrap,
       start: 'bottom 15%',
     },
     position: 'fixed',
     height: 114,
+    backgroundColor: '#fff',
+  });
+
+  gsap.to($headerWrap, {
+    scrollTrigger: {
+      trigger: $headerWrap,
+      start: 'bottom 15%',
+    },
+    height: 114,
+    PointerEvents: 'none',
+    userSelect: 'none',
   });
 
   introTl.to($headerInner, {
@@ -190,9 +202,19 @@ $(function () {
       start: 'bottom 15%',
       toggleActions: 'play none none reverse',
     },
+    width: 1780,
+    height: 114,
+  });
+
+  introTl.to($gnb, {
+    scrollTrigger: {
+      trigger: $headerWrap,
+      start: 'bottom 15%',
+      toggleActions: 'play none none reverse',
+    },
     height: '100%',
     backgroundColor: '#fff',
-    height: 114,
+    position: 'relative',
   });
 
   introTl.to(
@@ -201,8 +223,11 @@ $(function () {
       scrollTrigger: {
         trigger: $headerWrap,
         start: 'bottom 15%',
+        toggleActions: 'play none none reverse',
       },
       position: 'absolute',
+      top: '50%',
+      left: 62.5,
     },
     '<'
   );
@@ -292,14 +317,14 @@ $(function () {
   aniTl.from($animation1, {
     y: 100,
     autoAlpha: 0,
-    duration: 1,
+    duration: 0.5,
   });
 
   aniTl.to(
     $normalLeft,
     {
       x: -330,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
@@ -308,7 +333,7 @@ $(function () {
     $normalRight,
     {
       x: 360,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
@@ -316,20 +341,20 @@ $(function () {
   aniTl.to($animation1, {
     y: -100,
     autoAlpha: 0,
-    duration: 1,
+    duration: 0.5,
   });
 
   aniTl.from($animation2, {
     y: 100,
     autoAlpha: 0,
-    duration: 1,
+    duration: 0.5,
   });
 
   aniTl.to(
     $normalLeft,
     {
       x: -400,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
@@ -338,7 +363,7 @@ $(function () {
     $normalRight,
     {
       x: 420,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
@@ -346,20 +371,20 @@ $(function () {
   aniTl.to($animation2, {
     y: -100,
     autoAlpha: 0,
-    duration: 1,
+    duration: 0.5,
   });
 
   aniTl.from($animation3, {
     y: 100,
     autoAlpha: 0,
-    duration: 1,
+    duration: 0.5,
   });
 
   aniTl.to(
     $normalLeft,
     {
       x: -280,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
@@ -368,7 +393,7 @@ $(function () {
     $normalRight,
     {
       x: 330,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
@@ -376,19 +401,19 @@ $(function () {
   aniTl.to($animation3, {
     y: -100,
     autoAlpha: 0,
-    duration: 1,
+    duration: 0.5,
   });
 
   aniTl.to($normalLeft, {
     x: 0,
-    duration: 1,
+    duration: 0.3,
   });
 
   aniTl.to(
     $normalRight,
     {
       x: 0,
-      duration: 1,
+      duration: 0.3,
     },
     '<'
   );
