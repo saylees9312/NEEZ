@@ -171,7 +171,7 @@ $(function () {
     },
     scale: 0.2,
     top: '10%',
-    left: '5%',
+    left: '6%',
     duration: 1,
     position: 'fixed',
   });
@@ -180,6 +180,7 @@ $(function () {
     scrollTrigger: {
       trigger: $headerWrap,
       start: 'bottom 15%',
+      scrub: 1,
     },
     position: 'fixed',
     height: 114,
@@ -241,9 +242,20 @@ $(function () {
         toggleActions: 'play none play reverse',
       },
       position: 'static',
+      pointerEvents: 'inithal',
+      userSelect: 'inithal',
     },
     '<'
   );
+
+  $menu.on('mouseenter', function () {
+    $subMenu.stop().slideUp();
+    $(this).find($subMenu).stop().slideToggle();
+  });
+
+  $menu.on('mouseleave', function () {
+    $subMenu.stop().slideUp();
+  });
 
   const $product = $('.product');
   const prodTl = gsap.timeline();
