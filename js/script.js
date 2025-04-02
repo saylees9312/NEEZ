@@ -111,8 +111,8 @@ $(function () {
     '<'
   );
   introTl.to($introBg, {
-    autoAlpha: 0,
-    y: 150,
+    autoAlpha: 1,
+    y: 1000,
     duration: 1,
   });
   introTl.to('.header-intro .span1', {
@@ -145,6 +145,13 @@ $(function () {
   introTl.to($introText, {
     autoAlpha: 0,
   });
+  introTl.to(
+    $introBg,
+    {
+      autoAlpha: 0,
+    },
+    '<'
+  );
 
   introTl.set($menuList, {
     autoAlpha: 1,
@@ -166,13 +173,15 @@ $(function () {
   gsap.to($logo, {
     scrollTrigger: {
       trigger: $logo,
-      start: 'top 40%',
+      start: 'top=+50 0',
       toggleActions: 'play none none reverse',
+      scrub: 1,
     },
     scale: 0.2,
-    top: '10%',
+    top: '5%',
     left: '6%',
-    duration: 1,
+    translate: '0%',
+    duration: 0.3,
     position: 'fixed',
   });
 
@@ -180,7 +189,7 @@ $(function () {
     scrollTrigger: {
       trigger: $headerWrap,
       start: 'bottom 15%',
-      scrub: 1,
+      scrub: 2,
     },
     position: 'fixed',
     height: 114,
