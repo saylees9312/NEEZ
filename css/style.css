@@ -178,10 +178,6 @@
   position: relative;
 }
 
-.title-animation span {
-  /* display: none; */
-}
-
 .title-animation .ani1 {
   position: absolute;
   bottom: -20%;

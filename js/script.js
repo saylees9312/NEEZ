@@ -15,6 +15,7 @@ $(function () {
   const $menuList = $('.menu');
   const $menu = $('.menu > li');
   const $subMenu = $('.sub-menu');
+  const headerTl = gsap.timeline();
 
   const visualSwiper = new Swiper('.visual-slider', {
     loop: true,
@@ -185,15 +186,7 @@ $(function () {
     position: 'fixed',
   });
 
-  // gsap.to($logo, {
-  //   scrollTrigger: {
-  //     trigger: $logo,
-  //     start: 'top=+10 0',
-  //     toggleActions: 'play none none reverse',
-  //   },
-  // });
-
-  gsap.to($header, {
+  headerTl.to($header, {
     scrollTrigger: {
       trigger: $headerWrap,
       start: 'bottom 15%',
@@ -201,18 +194,22 @@ $(function () {
     },
     position: 'fixed',
     height: 114,
-    duration: 0,
+    duration: 0.01,
   });
 
-  gsap.to($header, {
-    scrollTrigger: {
-      trigger: $headerWrap,
-      start: 'bottom 0',
-      scrub: 1,
+  headerTl.to(
+    $header,
+    {
+      scrollTrigger: {
+        trigger: $headerWrap,
+        start: 'bottom 15%',
+        toggleActions: 'play none none reverse',
+      },
+      backgroundColor: 'rgb(255,255,255)',
+      duration: 0.1,
     },
-    backgroundColor: 'rgb(255,255,255)',
-    duration: 0.1,
-  });
+    '<'
+  );
 
   gsap.to($headerWrap, {
     scrollTrigger: {
