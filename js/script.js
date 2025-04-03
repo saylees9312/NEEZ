@@ -173,17 +173,25 @@ $(function () {
   gsap.to($logo, {
     scrollTrigger: {
       trigger: $logo,
-      start: 'top=+50 0',
+      start: 'top 5%',
       toggleActions: 'play none none reverse',
       scrub: 1,
     },
     scale: 0.2,
-    top: '5%',
+    yPercent: 0,
     left: '6%',
-    translate: '0%',
-    duration: 0.3,
+    top: '5%',
+    duration: 0.1,
     position: 'fixed',
   });
+
+  // gsap.to($logo, {
+  //   scrollTrigger: {
+  //     trigger: $logo,
+  //     start: 'top=+10 0',
+  //     toggleActions: 'play none none reverse',
+  //   },
+  // });
 
   gsap.to($header, {
     scrollTrigger: {
@@ -237,6 +245,7 @@ $(function () {
       },
       position: 'absolute',
       top: '50%',
+      y: '-50%',
       left: 62.5,
     },
     '<'
@@ -339,6 +348,7 @@ $(function () {
     y: 100,
     autoAlpha: 0,
     duration: 0.5,
+    delay: 1.3,
   });
 
   aniTl.to(
