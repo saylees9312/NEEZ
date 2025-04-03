@@ -37,7 +37,7 @@ $(function () {
   introTl.to($introBg, {
     autoAlpha: 1,
     duration: 1,
-    delay: 2,
+    delay: 0.3,
   });
 
   introTl.from(
@@ -197,11 +197,21 @@ $(function () {
     scrollTrigger: {
       trigger: $headerWrap,
       start: 'bottom 15%',
-      scrub: 2,
+      scrub: 1,
     },
     position: 'fixed',
     height: 114,
-    backgroundColor: '#fff',
+    duration: 0,
+  });
+
+  gsap.to($header, {
+    scrollTrigger: {
+      trigger: $headerWrap,
+      start: 'bottom 0',
+      scrub: 1,
+    },
+    backgroundColor: 'rgb(255,255,255)',
+    duration: 0.1,
   });
 
   gsap.to($headerWrap, {
@@ -231,7 +241,6 @@ $(function () {
       toggleActions: 'play none none reverse',
     },
     height: '100%',
-    backgroundColor: '#fff',
     position: 'relative',
   });
 
@@ -347,15 +356,15 @@ $(function () {
   aniTl.from($animation1, {
     y: 100,
     autoAlpha: 0,
-    duration: 0.5,
-    delay: 1.3,
+    duration: 0.3,
+    delay: 2.5,
   });
 
   aniTl.to(
     $normalLeft,
     {
       x: -330,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );
@@ -364,7 +373,7 @@ $(function () {
     $normalRight,
     {
       x: 360,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );
@@ -372,20 +381,21 @@ $(function () {
   aniTl.to($animation1, {
     y: -100,
     autoAlpha: 0,
-    duration: 0.5,
+    duration: 0.3,
+    delay: 1,
   });
 
   aniTl.from($animation2, {
     y: 100,
     autoAlpha: 0,
-    duration: 0.5,
+    duration: 0.3,
   });
 
   aniTl.to(
     $normalLeft,
     {
       x: -400,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );
@@ -394,7 +404,7 @@ $(function () {
     $normalRight,
     {
       x: 420,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );
@@ -402,20 +412,21 @@ $(function () {
   aniTl.to($animation2, {
     y: -100,
     autoAlpha: 0,
-    duration: 0.5,
+    duration: 0.3,
+    delay: 1,
   });
 
   aniTl.from($animation3, {
     y: 100,
     autoAlpha: 0,
-    duration: 0.5,
+    duration: 0.3,
   });
 
   aniTl.to(
     $normalLeft,
     {
       x: -280,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );
@@ -424,7 +435,7 @@ $(function () {
     $normalRight,
     {
       x: 330,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );
@@ -432,19 +443,20 @@ $(function () {
   aniTl.to($animation3, {
     y: -100,
     autoAlpha: 0,
-    duration: 0.5,
+    duration: 0.3,
+    delay: 1,
   });
 
   aniTl.to($normalLeft, {
     x: 0,
-    duration: 0.3,
+    duration: 0.2,
   });
 
   aniTl.to(
     $normalRight,
     {
       x: 0,
-      duration: 0.3,
+      duration: 0.2,
     },
     '<'
   );

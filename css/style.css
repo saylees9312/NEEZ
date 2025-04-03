@@ -184,21 +184,21 @@
 
 .title-animation .ani1 {
   position: absolute;
-  top: 50%;
+  bottom: -20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .title-animation .ani2 {
   position: absolute;
-  top: 50%;
+  bottom: -10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .title-animation .ani3 {
   position: absolute;
-  top: 50%;
+  bottom: -20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

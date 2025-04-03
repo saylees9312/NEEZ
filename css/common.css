@@ -48,7 +48,6 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  transition: all 0.3s ease;
 }
 
 #header.header-visual {
@@ -137,7 +136,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s linear; */
 }
 
 .logo a {
